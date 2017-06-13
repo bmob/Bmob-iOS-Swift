@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007C3FB81EF0272600934488 /* BmobQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C3FB41EF0272600934488 /* BmobQuery.swift */; };
+		007C3FB91EF0272600934488 /* BmobRequestWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C3FB51EF0272600934488 /* BmobRequestWork.swift */; };
+		007C3FBA1EF0272600934488 /* BmobSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C3FB61EF0272600934488 /* BmobSDK.swift */; };
+		007C3FBB1EF0272600934488 /* BmobUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C3FB71EF0272600934488 /* BmobUser.swift */; };
 		861306191EE53F8400018B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861306181EE53F8400018B81 /* AppDelegate.swift */; };
 		8613061B1EE53F8400018B81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613061A1EE53F8400018B81 /* ViewController.swift */; };
 		8613061E1EE53F8400018B81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8613061C1EE53F8400018B81 /* Main.storyboard */; };
@@ -14,10 +18,6 @@
 		861306231EE53F8400018B81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861306211EE53F8400018B81 /* LaunchScreen.storyboard */; };
 		8613062E1EE53F8400018B81 /* BmobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613062D1EE53F8400018B81 /* BmobTests.swift */; };
 		861306391EE53F8400018B81 /* BmobUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861306381EE53F8400018B81 /* BmobUITests.swift */; };
-		861306491EE5404300018B81 /* BmobRequestWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861306481EE5404300018B81 /* BmobRequestWork.swift */; };
-		8630FBE01EEF71E2003DA825 /* BmobSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8630FBDF1EEF71E2003DA825 /* BmobSDK.swift */; };
-		8630FBE21EEF721D003DA825 /* BmobQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8630FBE11EEF721D003DA825 /* BmobQuery.swift */; };
-		8630FBE41EEF901B003DA825 /* BmobUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8630FBE31EEF901B003DA825 /* BmobUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		007C3FB41EF0272600934488 /* BmobQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobQuery.swift; sourceTree = "<group>"; };
+		007C3FB51EF0272600934488 /* BmobRequestWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobRequestWork.swift; sourceTree = "<group>"; };
+		007C3FB61EF0272600934488 /* BmobSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobSDK.swift; sourceTree = "<group>"; };
+		007C3FB71EF0272600934488 /* BmobUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobUser.swift; sourceTree = "<group>"; };
 		861306151EE53F8400018B81 /* Bmob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bmob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		861306181EE53F8400018B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8613061A1EE53F8400018B81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +55,6 @@
 		861306341EE53F8400018B81 /* BmobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BmobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		861306381EE53F8400018B81 /* BmobUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmobUITests.swift; sourceTree = "<group>"; };
 		8613063A1EE53F8400018B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		861306481EE5404300018B81 /* BmobRequestWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobRequestWork.swift; sourceTree = "<group>"; };
-		8630FBDF1EEF71E2003DA825 /* BmobSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobSDK.swift; sourceTree = "<group>"; };
-		8630FBE11EEF721D003DA825 /* BmobQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobQuery.swift; sourceTree = "<group>"; };
-		8630FBE31EEF901B003DA825 /* BmobUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BmobUser.swift; sourceTree = "<group>"; };
 		869AA20A1EEE67CA00057857 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C3FB31EF0272600934488 /* BmobSDK */ = {
+			isa = PBXGroup;
+			children = (
+				007C3FB41EF0272600934488 /* BmobQuery.swift */,
+				007C3FB51EF0272600934488 /* BmobRequestWork.swift */,
+				007C3FB61EF0272600934488 /* BmobSDK.swift */,
+				007C3FB71EF0272600934488 /* BmobUser.swift */,
+			);
+			path = BmobSDK;
+			sourceTree = "<group>";
+		};
 		8613060C1EE53F8400018B81 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +117,9 @@
 		861306171EE53F8400018B81 /* Bmob */ = {
 			isa = PBXGroup;
 			children = (
+				007C3FB31EF0272600934488 /* BmobSDK */,
 				861306181EE53F8400018B81 /* AppDelegate.swift */,
 				8613061A1EE53F8400018B81 /* ViewController.swift */,
-				861306481EE5404300018B81 /* BmobRequestWork.swift */,
-				8630FBE11EEF721D003DA825 /* BmobQuery.swift */,
-				8630FBE31EEF901B003DA825 /* BmobUser.swift */,
-				8630FBDF1EEF71E2003DA825 /* BmobSDK.swift */,
 				869AA20A1EEE67CA00057857 /* Bridge.h */,
 				8613061C1EE53F8400018B81 /* Main.storyboard */,
 				8613061F1EE53F8400018B81 /* Assets.xcassets */,
@@ -273,12 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				861306491EE5404300018B81 /* BmobRequestWork.swift in Sources */,
+				007C3FB91EF0272600934488 /* BmobRequestWork.swift in Sources */,
 				8613061B1EE53F8400018B81 /* ViewController.swift in Sources */,
-				8630FBE41EEF901B003DA825 /* BmobUser.swift in Sources */,
+				007C3FBB1EF0272600934488 /* BmobUser.swift in Sources */,
+				007C3FB81EF0272600934488 /* BmobQuery.swift in Sources */,
+				007C3FBA1EF0272600934488 /* BmobSDK.swift in Sources */,
 				861306191EE53F8400018B81 /* AppDelegate.swift in Sources */,
-				8630FBE01EEF71E2003DA825 /* BmobSDK.swift in Sources */,
-				8630FBE21EEF721D003DA825 /* BmobQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
