@@ -25,11 +25,7 @@ class BmobRequestWork: NSObject {
         
         request.httpMethod = "GET";
         
-       
-        request.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
-        request.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-        
+        request = self.setRequestHeader(request: request);
         let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
             
             if data != nil{
@@ -53,9 +49,7 @@ class BmobRequestWork: NSObject {
      POST
      */
     class func zyPOSTwithURLSession(_ urlString:String,parmas:NSDictionary,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
-        
-        
-        
+
         let session = URLSession.shared;
         
         let str = self.parmasStringWithParmas(parmas);
@@ -66,12 +60,7 @@ class BmobRequestWork: NSObject {
         request.httpMethod = "POST";
         
         request.httpBody = str.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue));
-        request.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
-        request.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-        if (BmobSDK.shareBmobSDK().sessionToken != nil) {
-            request.setValue(BmobSDK.shareBmobSDK().sessionToken, forHTTPHeaderField: "X-Bmob-Session-Token");
-        }
+        request = self.setRequestHeader(request: request);
         let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
             
             if data != nil{
@@ -104,12 +93,7 @@ class BmobRequestWork: NSObject {
         var request = URLRequest(url: url!);
         
         request.httpMethod = "PUT";
-        request.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
-        request.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-        if (BmobSDK.shareBmobSDK().sessionToken != nil) {
-            request.setValue(BmobSDK.shareBmobSDK().sessionToken, forHTTPHeaderField: "X-Bmob-Session-Token");
-        }
+        request = self.setRequestHeader(request: request);
         let jsonData = try?JSONSerialization.data(withJSONObject: parmas, options: JSONSerialization.WritingOptions.prettyPrinted);
         request.httpBody = jsonData! as Data;
        
@@ -144,10 +128,7 @@ class BmobRequestWork: NSObject {
         var request = URLRequest(url: url!);
         
         request.httpMethod = "DELETE";
-        request.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
-        request.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-       
+        request = self.setRequestHeader(request: request);
         let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
             
             if data != nil{
@@ -181,12 +162,8 @@ class BmobRequestWork: NSObject {
         request.httpMethod = "POST";
         let jsonData = try?JSONSerialization.data(withJSONObject: parmas, options: JSONSerialization.WritingOptions.prettyPrinted);
         request.httpBody = jsonData;
-        request.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
-        request.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type");
-        if (BmobSDK.shareBmobSDK().sessionToken != nil) {
-            request.setValue(BmobSDK.shareBmobSDK().sessionToken, forHTTPHeaderField: "X-Bmob-Session-Token");
-        }
+        
+        request = self.setRequestHeader(request: request);
         let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
             
             if data != nil{
@@ -206,6 +183,24 @@ class BmobRequestWork: NSObject {
         task.resume();
     }
 
+    //添加request请求头
+    class func setRequestHeader(request:URLRequest) -> URLRequest{
+        var multrequest = request;
+       
+        
+        multrequest.setValue("application/json", forHTTPHeaderField: "Content-Type");
+       
+        if (BmobSDK.shareBmobSDK().fulKey != nil){
+            multrequest.setValue(BmobSDK.shareBmobSDK().fulKey, forHTTPHeaderField: "X-Bmob-REST-API-Key");
+        }
+        if (BmobSDK.shareBmobSDK().app_ID != nil){
+            multrequest.setValue(BmobSDK.shareBmobSDK().app_ID, forHTTPHeaderField: "X-Bmob-Application-Id");
+        }
+        if (BmobSDK.shareBmobSDK().sessionToken != nil) {
+            multrequest.setValue(BmobSDK.shareBmobSDK().sessionToken, forHTTPHeaderField: "X-Bmob-Session-Token");
+        }
+        return multrequest;
+    }
     //拼接GET参数
     class func parmasStringWithParmas(_ parmas:NSDictionary)->String{
         
