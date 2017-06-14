@@ -8,14 +8,14 @@
 
 import UIKit
 
-class BmobFile: NSObject {
+public class BmobFile: NSObject {
     
     
     
     /**
      * 上传图片
      */
-    func upImage(image:UIImage,_ mathFunction: @escaping zymathFuncation){
+    public func upImage(image:UIImage,_ mathFunction: @escaping zymathFuncation){
         let fileName = reDate() + ".jpg";
         let url = BmobFileUrl + fileName;
         
@@ -30,7 +30,7 @@ class BmobFile: NSObject {
      * fileName 文件名
      * filePath 文件路径
      */
-    func upFile(_ fileType:String,_ fileName:String,_ filePath:String,_ mathFunction: @escaping zymathFuncation) {
+    public func upFile(_ fileType:String,_ fileName:String,_ filePath:String,_ mathFunction: @escaping zymathFuncation) {
         if fileType == "" || fileName == "" || filePath == "" {
             mathFunction("参数有误" as AnyObject,false,nil);
             return;
@@ -47,7 +47,7 @@ class BmobFile: NSObject {
      * fileUrl 是上传之后返回的url，然后去掉前面的域名
      * cdnName 是上传之后返回的
      */
-    func deletFile(_ fileUrl:String,_ cdnName:String,mathFunction: @escaping zymathFuncation){
+    public func deletFile(_ fileUrl:String,_ cdnName:String,mathFunction: @escaping zymathFuncation){
         if fileUrl == "" || cdnName == ""{
             mathFunction("参数有误" as AnyObject,false,nil);
             return;
@@ -65,7 +65,7 @@ class BmobFile: NSObject {
      * fileUrlArray 是上传之后返回的url的数组，然后每个url去掉前面的域名
      * cdnName 是上传之后返回的
      */
-    func deleteMoreFile(_ fileUrlArray:Array<String>,_ cdnName:String,mathFunction: @escaping zymathFuncation){
+    public func deleteMoreFile(_ fileUrlArray:Array<String>,_ cdnName:String,mathFunction: @escaping zymathFuncation){
         if cdnName == "" || fileUrlArray.count <= 0{
             mathFunction("参数有误" as AnyObject,false,nil);
             return;

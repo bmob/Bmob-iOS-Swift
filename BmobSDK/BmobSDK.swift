@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BmobSDK: NSObject {
+public class BmobSDK: NSObject {
     var app_ID:String?;
     var fulKey:String?;
     //当前登录用户ID
@@ -18,13 +18,13 @@ class BmobSDK: NSObject {
     
     //单例
     static let instance = BmobSDK.init();
-    class func shareBmobSDK()->BmobSDK{
+    public class func shareBmobSDK()->BmobSDK{
         
         return instance;
     }
     
     /**注册应用*/
-    func registApp(appID:String,restFulKey:String){
+    public func registApp(appID:String,restFulKey:String){
         app_ID = appID;
         fulKey = restFulKey;
         

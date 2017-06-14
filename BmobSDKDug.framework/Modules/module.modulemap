@@ -1,0 +1,10 @@
+framework module BmobSDKDug {
+  umbrella header "BmobSDKDug.h"
+
+  export *
+  module * { export * }
+}
+
+module BmobSDKDug.Swift {
+    header "BmobSDKDug-Swift.h"
+}

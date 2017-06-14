@@ -11,7 +11,7 @@ import UIKit
 let BmobQueryUrl = "https://api.bmob.cn/1/classes/";
 let BmobUserUrl = "https://api.bmob.cn/1/";
 let BmobFileUrl = "https://api.bmob.cn/2/files/";
-typealias zymathFuncation = (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void
+public typealias zymathFuncation = (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void
 
 
 class BmobRequestConfig: NSObject {
