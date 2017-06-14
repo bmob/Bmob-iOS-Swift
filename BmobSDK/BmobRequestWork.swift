@@ -10,7 +10,7 @@ import UIKit
 
 class BmobRequestWork: NSObject {
     /**
-     GET
+     * GET
      */
     class func zyGETWithURLSession(_ urlString:String,parmas:NSDictionary,_ mathFunction: @escaping zymathFuncation){
         
@@ -30,7 +30,7 @@ class BmobRequestWork: NSObject {
         
     }
     /**
-     POST
+     * POST
      */
     class func zyPOSTwithURLSession(_ urlString:String,parmas:NSDictionary,_ mathFunction: @escaping zymathFuncation){
 
@@ -51,7 +51,7 @@ class BmobRequestWork: NSObject {
     }
  
     /**
-     update
+     * update
      */
     class func zyUpwithURLSession(_ urlString:String,parmas:Dictionary<String,Any>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
   
@@ -72,7 +72,7 @@ class BmobRequestWork: NSObject {
         task.resume();
     }
     /**
-     delete
+     * delete
      */
     class func zyDeletewithURLSession(_ urlString:String,_ mathFunction: @escaping zymathFuncation){
         
@@ -90,7 +90,7 @@ class BmobRequestWork: NSObject {
         task.resume();
     }
     /**
-     POST  ROW请求格式请求
+     * POST  ROW请求格式请求
      */
     class func zyRowPOSTwithURLSession(_ urlString:String,parmas:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
         let session = URLSession.shared;

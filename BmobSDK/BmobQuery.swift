@@ -16,7 +16,7 @@ class BmobQuery: NSObject {
     var skip = 0;
     
     /**
-     创建BmobQuery对象
+     * 创建BmobQuery对象
      */
     class func queryWithTabName(tabName:String) -> BmobQuery?{
     
@@ -25,11 +25,11 @@ class BmobQuery: NSObject {
             return nil;
         }
         _tabName = tabName;
-        url = BaseQueryUrl + _tabName!;
+        url = BmobQueryUrl + _tabName!;
         return BmobQuery.init();
     }
     /**
-     添加一条数据
+     * 添加一条数据
      */
     func addOneData(dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
        
@@ -41,7 +41,7 @@ class BmobQuery: NSObject {
         
     }
     /**
-     更新一条数据
+     * 更新一条数据
      */
     func upOneData(objectId:String,dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
         if objectId == "" {
@@ -56,7 +56,7 @@ class BmobQuery: NSObject {
        
     }
     /**
-     删除一条数据
+     * 删除一条数据
      */
     func deleteOneData(objectId:String,_ mathFunction: @escaping zymathFuncation){
         
@@ -72,8 +72,8 @@ class BmobQuery: NSObject {
       
     }
     /**
-     查询单条数据
-     objectId 数据对应ID
+     * 查询单条数据
+     * objectId 数据对应ID
      */
     func searchOneData(objectId:String,_ mathFunction: @escaping zymathFuncation){
         
@@ -88,7 +88,9 @@ class BmobQuery: NSObject {
         }
        
     }
-    /**查询全部数据没有查询条件*/
+    /**
+     * 查询全部数据没有查询条件
+     */
     func searchAllData(_ mathFunction: @escaping zymathFuncation){
        
         var dataDic = Dictionary<String,Any>.init();
@@ -106,9 +108,9 @@ class BmobQuery: NSObject {
         
     }
     /**
-     条件查询
-     可多条件
-     全部放入searchDic中
+     * 条件查询
+     * 可多条件
+     * 全部放入searchDic中
      */
     func searchDataWithWhere(searchDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
       

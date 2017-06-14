@@ -26,7 +26,7 @@ class BmobUser: NSObject {
         UserInfo[key] = value;
     }
     /**
-     注册用户
+     * 注册用户
      */
     func register(_ mathFunction: @escaping zymathFuncation){
         
@@ -34,7 +34,7 @@ class BmobUser: NSObject {
             mathFunction("用户名或密码缺失" as AnyObject,false,nil);
             return;
         }
-        let url = BaseUserUrl + "users";
+        let url = BmobUserUrl + "users";
         BmobRequestWork.zyRowPOSTwithURLSession(url, parmas: UserInfo) { (anyObject, isSuccess, zyError) in
             mathFunction(anyObject,isSuccess,zyError);
         }
@@ -42,14 +42,14 @@ class BmobUser: NSObject {
     }
     
     /**
-     登录用户
+     * 登录用户
      */
     func login(username:String,password:String,_ mathFunction: @escaping zymathFuncation){
         if username == "" || password == "" {
             mathFunction("用户名或密码缺失" as AnyObject,false,nil);
             return;
         }
-        let url = BaseUserUrl + "login"
+        let url = BmobUserUrl + "login"
         BmobRequestWork.zyGETWithURLSession(url, parmas: ["username":username,"password":password]) { (anyObject, isSuccess, zyError) in
             if isSuccess{
                 
@@ -60,44 +60,44 @@ class BmobUser: NSObject {
         }
     }
     /**
-     获取当前用户信息
+     * 获取当前用户信息
      */
     func currentUser(_ mathFunction: @escaping zymathFuncation){
         if BmobSDK.shareBmobSDK().currentUserID == nil {
             mathFunction("未登录" as AnyObject,false,nil);
             return ;
         }
-        let url = BaseUserUrl + "users/" + BmobSDK.shareBmobSDK().currentUserID!;
+        let url = BmobUserUrl + "users/" + BmobSDK.shareBmobSDK().currentUserID!;
         BmobRequestWork.zyGETWithURLSession(url, parmas: NSDictionary()) { (anyObject, isSuccess, zyError) in
           
             mathFunction(anyObject,isSuccess,zyError);
         }
     }
     /**
-     更新当前用户信息
+     * 更新当前用户信息
      */
     func upDateUesrInfo(dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
         
-        let url = BaseUserUrl + "users/" + BmobSDK.shareBmobSDK().currentUserID!;
+        let url = BmobUserUrl + "users/" + BmobSDK.shareBmobSDK().currentUserID!;
         BmobRequestWork.zyUpwithURLSession(url, parmas: dataDic) { (anyObject, isSuccess, zyError) in
             mathFunction(anyObject,isSuccess,zyError);
         }
     }
     /**
-     查询所有用户
-     searchDic 查询的限制
-     如["limit":"12","skip":"10"]设置返回数据个数和跳过多少条数据
+     * 查询所有用户
+     * searchDic 查询的限制
+     * 如["limit":"12","skip":"10"]设置返回数据个数和跳过多少条数据
      */
     func searchAllUser(searchDic:Dictionary<String,String>,_ mathFunction: @escaping zymathFuncation){
-        let url = BaseUserUrl + "users" ;
+        let url = BmobUserUrl + "users" ;
         BmobRequestWork.zyGETWithURLSession(url, parmas: searchDic as NSDictionary) { (anyObject, isSuccess, zyError) in
             
             mathFunction(anyObject,isSuccess,zyError);
         }
     }
     /**
-     修改密码
-     新老密码方式修改
+     * 修改密码
+     * 新老密码方式修改
      */
     func updatePassword(oldPassword:String,newPassword:String,_ mathFunction: @escaping zymathFuncation){
         
@@ -105,7 +105,7 @@ class BmobUser: NSObject {
             mathFunction("密码内容有误" as AnyObject,false,nil);
             return;
         }
-        let url = BaseUserUrl + "updateUserPassword/" + BmobSDK.shareBmobSDK().currentUserID!;
+        let url = BmobUserUrl + "updateUserPassword/" + BmobSDK.shareBmobSDK().currentUserID!;
         
        BmobRequestWork.zyUpwithURLSession(url, parmas:["oldPassword":oldPassword,"newPassword":newPassword]) { (anyObject, isSuccess, zyError) in
          mathFunction(anyObject,isSuccess,zyError);

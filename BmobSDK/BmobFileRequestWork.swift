@@ -11,7 +11,7 @@ import UIKit
 class BmobFileRequestWork: NSObject {
     
     /**
-     upload image
+     * upload image
      */
     class func uploadImage(_ urlString:String,image:UIImage,_ mathFunction: @escaping zymathFuncation){
         
@@ -36,7 +36,7 @@ class BmobFileRequestWork: NSObject {
         
     }
     /**
-     upload file
+     * upload file
      */
     class func uploadFile(_ urlString:String,_ fileType:String,_ filePath:String,_ mathFunction: @escaping zymathFuncation){
         let session = URLSession.shared;
@@ -57,6 +57,22 @@ class BmobFileRequestWork: NSObject {
         }
         task.resume();
     }
-    
+    /**
+     * delet file
+     */
+    class func deletFile(urlString:String,_ mathFunction: @escaping zymathFuncation){
+        let session = URLSession.shared;
+        let url = URL(string: urlString);
+        var request = URLRequest(url: url!);
+        request.httpMethod = "DELETE";
+        request = BmobRequestConfig.setRequestHeader(request: request);
+        let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
+            
+            let bmconfig = BmobRequestConfig().requestTask(data: data, response: respons, error: error);
+            mathFunction(bmconfig.anyObject,bmconfig.isSuccess,bmconfig.zyError);
+        })
+        
+        task.resume();
+    }
     
 }

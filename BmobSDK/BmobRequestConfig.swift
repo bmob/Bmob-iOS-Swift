@@ -8,16 +8,16 @@
 
 import UIKit
 
-let BaseQueryUrl = "https://api.bmob.cn/1/classes/";
-let BaseUserUrl = "https://api.bmob.cn/1/";
-let BaseFileUrl = "https://api.bmob.cn/2/files/";
+let BmobQueryUrl = "https://api.bmob.cn/1/classes/";
+let BmobUserUrl = "https://api.bmob.cn/1/";
+let BmobFileUrl = "https://api.bmob.cn/2/files/";
 typealias zymathFuncation = (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void
 
 
 class BmobRequestConfig: NSObject {
 
     /**
-     返回请求结果
+     * 返回请求结果
      */
     func requestTask(data:Data?,response:URLResponse?, error:Error?) -> (anyObject:AnyObject,isSuccess:Bool,zyError:Error?){
         
