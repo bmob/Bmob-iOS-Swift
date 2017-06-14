@@ -74,5 +74,25 @@ class BmobFileRequestWork: NSObject {
         
         task.resume();
     }
+    /**
+     * delete More file
+     */
+    class func deleteMoreFile(urlString:String,fileDic:Dictionary<String,Array<String>> ,_ mathFunction: @escaping zymathFuncation){
+        let session = URLSession.shared;
+        let url = URL(string: urlString);
+        var request = URLRequest(url: url!);
+        request.httpMethod = "POST";
+        request = BmobRequestConfig.setRequestHeader(request: request);
+        let jsonData = try?JSONSerialization.data(withJSONObject: fileDic, options: JSONSerialization.WritingOptions.prettyPrinted);
+        request.httpBody = jsonData! as Data;
+        
+        let task = session.dataTask(with:request, completionHandler: { (data, respons, error) -> Void in
+            
+            let bmconfig = BmobRequestConfig().requestTask(data: data, response: respons, error: error);
+            mathFunction(bmconfig.anyObject,bmconfig.isSuccess,bmconfig.zyError);
+        })
+        
+        task.resume();
+    }
     
 }

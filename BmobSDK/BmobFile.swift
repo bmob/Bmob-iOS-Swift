@@ -27,7 +27,7 @@ class BmobFile: NSObject {
     /**
      * 上传文件
      * fileType 文件类型 如 image/jpeg
-     * fileName 文件名 返回的cdnName名字
+     * fileName 文件名
      * filePath 文件路径
      */
     func upFile(_ fileType:String,_ fileName:String,_ filePath:String,_ mathFunction: @escaping zymathFuncation) {
@@ -45,7 +45,7 @@ class BmobFile: NSObject {
     /**
      * 删除文件
      * fileUrl 是上传之后返回的url，然后去掉前面的域名
-     * cdnName 是上传之后返回的名字
+     * cdnName 是上传之后返回的
      */
     func deletFile(_ fileUrl:String,_ cdnName:String,mathFunction: @escaping zymathFuncation){
         if fileUrl == "" || cdnName == ""{
@@ -55,6 +55,23 @@ class BmobFile: NSObject {
         let url = BmobFileUrl + cdnName + "/" + fileUrl;
        
         BmobFileRequestWork.deletFile(urlString: url) { (anyObject, isSuccess, zyError) in
+            
+            mathFunction(anyObject,isSuccess,zyError);
+        }
+        
+    }
+    /**
+     * 批量删除文件
+     * fileUrlArray 是上传之后返回的url的数组，然后每个url去掉前面的域名
+     * cdnName 是上传之后返回的
+     */
+    func deleteMoreFile(_ fileUrlArray:Array<String>,_ cdnName:String,mathFunction: @escaping zymathFuncation){
+        if cdnName == "" || fileUrlArray.count <= 0{
+            mathFunction("参数有误" as AnyObject,false,nil);
+            return;
+        }
+        let url = "https://api.bmob.cn/2/cdnBatchDelete";
+        BmobFileRequestWork.deleteMoreFile(urlString: url, fileDic: [cdnName:fileUrlArray]) { (anyObject, isSuccess, zyError) in
             
             mathFunction(anyObject,isSuccess,zyError);
         }
