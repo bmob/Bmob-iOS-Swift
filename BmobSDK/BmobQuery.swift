@@ -31,7 +31,7 @@ class BmobQuery: NSObject {
     /**
      添加一条数据
      */
-    func addOneData(dataDic:Dictionary<String,Any>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func addOneData(dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
        
        
         BmobRequestWork.zyRowPOSTwithURLSession(url!, parmas: dataDic) { (anyObject, isSuccess, zyError) in
@@ -43,7 +43,7 @@ class BmobQuery: NSObject {
     /**
      更新一条数据
      */
-    func upOneData(objectId:String,dataDic:Dictionary<String,Any>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func upOneData(objectId:String,dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
         if objectId == "" {
             mathFunction("ObjectId为空" as AnyObject,false,nil);
             return;
@@ -58,7 +58,7 @@ class BmobQuery: NSObject {
     /**
      删除一条数据
      */
-    func deleteOneData(objectId:String,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func deleteOneData(objectId:String,_ mathFunction: @escaping zymathFuncation){
         
         if objectId == "" {
             mathFunction("objectId为空" as AnyObject,false,nil);
@@ -75,7 +75,7 @@ class BmobQuery: NSObject {
      查询单条数据
      objectId 数据对应ID
      */
-    func searchOneData(objectId:String,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func searchOneData(objectId:String,_ mathFunction: @escaping zymathFuncation){
         
         if objectId == "" {
             mathFunction("objectId为空" as AnyObject,false,nil);
@@ -89,7 +89,7 @@ class BmobQuery: NSObject {
        
     }
     /**查询全部数据没有查询条件*/
-    func searchAllData(mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func searchAllData(_ mathFunction: @escaping zymathFuncation){
        
         var dataDic = Dictionary<String,Any>.init();
         if limit > 0 {
@@ -110,7 +110,7 @@ class BmobQuery: NSObject {
      可多条件
      全部放入searchDic中
      */
-    func searchDataWithWhere(searchDic:Dictionary<String,Any>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func searchDataWithWhere(searchDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
       
         let jsonData = try?JSONSerialization.data(withJSONObject: searchDic, options: JSONSerialization.WritingOptions.prettyPrinted);
         let str = String.init(data: jsonData!, encoding: String.Encoding.utf8) ;

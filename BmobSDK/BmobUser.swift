@@ -28,7 +28,7 @@ class BmobUser: NSObject {
     /**
      注册用户
      */
-    func register(mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func register(_ mathFunction: @escaping zymathFuncation){
         
         if UserInfo["username"] == nil || UserInfo["password"] == nil {
             mathFunction("用户名或密码缺失" as AnyObject,false,nil);
@@ -44,7 +44,7 @@ class BmobUser: NSObject {
     /**
      登录用户
      */
-    func login(username:String,password:String,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func login(username:String,password:String,_ mathFunction: @escaping zymathFuncation){
         if username == "" || password == "" {
             mathFunction("用户名或密码缺失" as AnyObject,false,nil);
             return;
@@ -62,7 +62,7 @@ class BmobUser: NSObject {
     /**
      获取当前用户信息
      */
-    func currentUser(mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func currentUser(_ mathFunction: @escaping zymathFuncation){
         if BmobSDK.shareBmobSDK().currentUserID == nil {
             mathFunction("未登录" as AnyObject,false,nil);
             return ;
@@ -76,7 +76,7 @@ class BmobUser: NSObject {
     /**
      更新当前用户信息
      */
-    func upDateUesrInfo(dataDic:Dictionary<String,Any>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func upDateUesrInfo(dataDic:Dictionary<String,Any>,_ mathFunction: @escaping zymathFuncation){
         
         let url = BaseUserUrl + "users/" + BmobSDK.shareBmobSDK().currentUserID!;
         BmobRequestWork.zyUpwithURLSession(url, parmas: dataDic) { (anyObject, isSuccess, zyError) in
@@ -88,7 +88,7 @@ class BmobUser: NSObject {
      searchDic 查询的限制
      如["limit":"12","skip":"10"]设置返回数据个数和跳过多少条数据
      */
-    func searchAllUser(searchDic:Dictionary<String,String>,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func searchAllUser(searchDic:Dictionary<String,String>,_ mathFunction: @escaping zymathFuncation){
         let url = BaseUserUrl + "users" ;
         BmobRequestWork.zyGETWithURLSession(url, parmas: searchDic as NSDictionary) { (anyObject, isSuccess, zyError) in
             
@@ -99,7 +99,7 @@ class BmobUser: NSObject {
      修改密码
      新老密码方式修改
      */
-    func updatePassword(oldPassword:String,newPassword:String,mathFunction:@escaping (_ responObject:AnyObject,_ isSuccess:Bool,_ zyError:Error?)->Void){
+    func updatePassword(oldPassword:String,newPassword:String,_ mathFunction: @escaping zymathFuncation){
         
         if oldPassword == "" || newPassword == "" || oldPassword == newPassword{
             mathFunction("密码内容有误" as AnyObject,false,nil);

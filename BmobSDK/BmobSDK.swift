@@ -7,8 +7,7 @@
 //
 
 import UIKit
-let BaseQueryUrl = "https://api.bmob.cn/1/classes/";
-let BaseUserUrl = "https://api.bmob.cn/1/";
+
 class BmobSDK: NSObject {
     var app_ID:String?;
     var fulKey:String?;
