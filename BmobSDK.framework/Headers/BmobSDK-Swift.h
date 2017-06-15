@@ -117,7 +117,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class UIImage;
 
-SWIFT_CLASS("_TtC10BmobSDKDug8BmobFile")
+SWIFT_CLASS("_TtC7BmobSDK8BmobFile")
 @interface BmobFile : NSObject
 /**
   上传图片
@@ -146,7 +146,7 @@ SWIFT_CLASS("_TtC10BmobSDKDug8BmobFile")
 @end
 
 
-SWIFT_CLASS("_TtC10BmobSDKDug9BmobQuery")
+SWIFT_CLASS("_TtC7BmobSDK9BmobQuery")
 @interface BmobQuery : NSObject
 /**
   限制返回数据的个数
@@ -191,7 +191,7 @@ SWIFT_CLASS("_TtC10BmobSDKDug9BmobQuery")
 @end
 
 
-SWIFT_CLASS("_TtC10BmobSDKDug7BmobSDK")
+SWIFT_CLASS("_TtC7BmobSDK7BmobSDK")
 @interface BmobSDK : NSObject
 + (BmobSDK * _Nonnull)shareBmobSDK;
 /**
@@ -202,7 +202,7 @@ SWIFT_CLASS("_TtC10BmobSDKDug7BmobSDK")
 @end
 
 
-SWIFT_CLASS("_TtC10BmobSDKDug8BmobUser")
+SWIFT_CLASS("_TtC7BmobSDK8BmobUser")
 @interface BmobUser : NSObject
 - (void)setNameWithUserName:(NSString * _Nonnull)userName;
 - (void)setPassWordWithPassword:(NSString * _Nonnull)password;

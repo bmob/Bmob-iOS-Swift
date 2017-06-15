@@ -4,86 +4,86 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/BmobSDKDug-Swift.h</key>
+		<key>Headers/BmobSDK-Swift.h</key>
 		<data>
-		pEIVaIoIAWNKRhuzfI581ixkjWk=
+		KbWCdZfyMnr5ZBUcHGUXKQ/n3Ms=
 		</data>
-		<key>Headers/BmobSDKDug.h</key>
+		<key>Headers/BmobSDK.h</key>
 		<data>
-		BN8Bs5lOtu9DaaWuujvi1MEfVu8=
+		QXBQWUVinBXR9q2RavTl+dpveg8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dd4odfI/nDkx8OsbdyAiCIh8LF0=
+		YCTr5l7aejf28WL3rJMf3ngMPZU=
 		</data>
-		<key>Modules/BmobSDKDug.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/BmobSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		+h6wZSTVUOfJWQVXFbgo0DJRWRE=
+		KkEB9mioTXI74dRjHCxEHEiWNIQ=
 		</data>
-		<key>Modules/BmobSDKDug.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/BmobSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		t4eWyyqYSv9QLX2g7KQq5U3REus=
+		P3HfmL9UQlYxxaf+gS5dd1JG7k4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		gB8cYwkD1BpPQ7Oegk6wqV51ae4=
+		HgPmCHBj+ML6TQEnjegii2nuf7Y=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/BmobSDKDug-Swift.h</key>
+		<key>Headers/BmobSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pEIVaIoIAWNKRhuzfI581ixkjWk=
+			KbWCdZfyMnr5ZBUcHGUXKQ/n3Ms=
 			</data>
 			<key>hash2</key>
 			<data>
-			dTXfcbRdyVDpUOmxNPsc6tThDcCjcwN8ZNpqCLisinc=
+			nIjgCmWL5PZEnL3RhruuMJ6CWhOqD8pCvl+A1AA7dp0=
 			</data>
 		</dict>
-		<key>Headers/BmobSDKDug.h</key>
+		<key>Headers/BmobSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BN8Bs5lOtu9DaaWuujvi1MEfVu8=
+			QXBQWUVinBXR9q2RavTl+dpveg8=
 			</data>
 			<key>hash2</key>
 			<data>
-			EXtQz2jMDDaXN7dfK/cDTGkDXqnmOi2OchtX5O8hb8w=
+			b7g/kkRdo6PGz3uiKu0vuhPtkk2e4xb8XLtwLOXKqvU=
 			</data>
 		</dict>
-		<key>Modules/BmobSDKDug.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/BmobSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+h6wZSTVUOfJWQVXFbgo0DJRWRE=
+			KkEB9mioTXI74dRjHCxEHEiWNIQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			08FS/h0h6OvMlw6feknsfHMPDBskAx/k5aIv1O2TBNA=
+			keFibPtM3Wl+i40UNMN1M3Yx/SDWP+f6gkjYVRuRhuU=
 			</data>
 		</dict>
-		<key>Modules/BmobSDKDug.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/BmobSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t4eWyyqYSv9QLX2g7KQq5U3REus=
+			P3HfmL9UQlYxxaf+gS5dd1JG7k4=
 			</data>
 			<key>hash2</key>
 			<data>
-			IYqdOSw94ThT1HWh8odFOqxUvQ0xWbh6OoWil2ffLKY=
+			xYnndFSbv1qVhBhjwhAbEf34urLQzZosa9b9PFPhtqg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gB8cYwkD1BpPQ7Oegk6wqV51ae4=
+			HgPmCHBj+ML6TQEnjegii2nuf7Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			8bMeGQkthjkJcu3ElN+xTgkLu9uQzcRA3oBrQUv8kfA=
+			No+vhEo4BugMS51mo9i2+Yw0zAj+O8bdXSKq0D63aS8=
 			</data>
 		</dict>
 	</dict>
