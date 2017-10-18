@@ -7,4 +7,5 @@ framework module BmobSDK {
 
 module BmobSDK.Swift {
     header "BmobSDK-Swift.h"
+    requires objc
 }

@@ -2,8 +2,8 @@
 //  BmobSDK.h
 //  BmobSDK
 //
-//  Created by zhangxianhonog on 17/6/15.
-//  Copyright © 2017年 zhangxianhonog. All rights reserved.
+//  Created by z x h  on 2017/10/18.
+//  Copyright © 2017年 zxh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
